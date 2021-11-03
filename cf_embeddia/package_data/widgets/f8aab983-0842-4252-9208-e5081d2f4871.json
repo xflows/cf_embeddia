@@ -1,0 +1,126 @@
+[
+  {
+    "model": "workflows.abstractwidget",
+    "fields": {
+      "name": "Comment moderator",
+      "action": "cf_embeddia_comment_moderator",
+      "wsdl": "",
+      "wsdl_method": "",
+      "description": "This widget is a wrapper around comment analyzer developed in the EU Embeddia project. It filters the input corpus by removing offensive documents.",
+      "category": "d7fab604-318a-4c74-a0ac-f0f9d5263dd4",
+      "visualization_view": "",
+      "streaming_visualization_view": "",
+      "interactive": false,
+      "interaction_view": "",
+      "post_interact_action": "",
+      "image": "",
+      "treeview_image": "",
+      "static_image": "",
+      "has_progress_bar": false,
+      "is_streaming": false,
+      "order": 1,
+      "uid": "f8aab983-0842-4252-9208-e5081d2f4871",
+      "package": "cf_embeddia",
+      "always_save_results": false,
+      "windows_queue": false
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Threshold",
+      "short_name": "thr",
+      "description": "Threshold for filtering",
+      "variable": "threshold",
+      "widget": "f8aab983-0842-4252-9208-e5081d2f4871",
+      "required": true,
+      "parameter": true,
+      "multi": false,
+      "default": "0.75",
+      "parameter_type": "text",
+      "order": 1,
+      "uid": "11ad25ad-7045-4404-9051-ed6ccc4d3517"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Corpus",
+      "short_name": "txt",
+      "description": "Corpus (a list of strings)",
+      "variable": "corpus",
+      "widget": "f8aab983-0842-4252-9208-e5081d2f4871",
+      "required": true,
+      "parameter": false,
+      "multi": false,
+      "default": "",
+      "parameter_type": null,
+      "order": 1,
+      "uid": "968548c4-639f-42ee-a73c-b95da285361e"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Service URL",
+      "short_name": "url",
+      "description": "URL of the service",
+      "variable": "url",
+      "widget": "f8aab983-0842-4252-9208-e5081d2f4871",
+      "required": true,
+      "parameter": true,
+      "multi": false,
+      "default": "https://embeddia-demo.texta.ee/api/v1/comment_analyzer/",
+      "parameter_type": "text",
+      "order": 1,
+      "uid": "9bf62285-33d0-4345-9bdc-2ce7ea1958a8"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Analyzer",
+      "short_name": "alg",
+      "description": "Analysis method to be applied on each text",
+      "variable": "analyzer",
+      "widget": "f8aab983-0842-4252-9208-e5081d2f4871",
+      "required": true,
+      "parameter": true,
+      "multi": false,
+      "default": "Comment Moderator (Cross-lingual)",
+      "parameter_type": "select",
+      "order": 1,
+      "uid": "a1dca5c3-5afa-418f-97b5-25205f49c552"
+    }
+  },
+  {
+    "model": "workflows.abstractoutput",
+    "fields": {
+      "name": "Filtered corpus",
+      "short_name": "txt",
+      "description": "Corpus with offensive comments removed (a list of strings)",
+      "variable": "filtered_corpus",
+      "widget": "f8aab983-0842-4252-9208-e5081d2f4871",
+      "order": 1,
+      "uid": "991f427d-f7c3-40e5-9683-c55b1b24967f"
+    }
+  },
+  {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "abstract_input": "a1dca5c3-5afa-418f-97b5-25205f49c552",
+      "name": "Comment Moderator (Estonian)",
+      "value": "Comment Moderator (Estonian)",
+      "uid": "00f9c7be-b7e4-4ef6-a638-e2343e9184e2"
+    }
+  },
+  {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "abstract_input": "a1dca5c3-5afa-418f-97b5-25205f49c552",
+      "name": "Comment Moderator (Cross-lingual)",
+      "value": "Comment Moderator (Cross-lingual)",
+      "uid": "d1d06cf7-8276-44e0-9f2b-a774cc4fda5f"
+    }
+  }
+]

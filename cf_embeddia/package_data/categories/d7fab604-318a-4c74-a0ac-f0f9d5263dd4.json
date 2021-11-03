@@ -1,0 +1,9 @@
+{
+  "model": "workflows.category",
+  "fields": {
+    "name": "Texta demo",
+    "parent": null,
+    "order": 1,
+    "uid": "d7fab604-318a-4c74-a0ac-f0f9d5263dd4"
+  }
+}
