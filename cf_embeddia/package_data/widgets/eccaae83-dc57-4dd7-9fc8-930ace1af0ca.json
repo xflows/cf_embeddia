@@ -1,0 +1,127 @@
+[
+  {
+    "model": "workflows.abstractwidget",
+    "fields": {
+      "name": "Article analyzer (keywords)",
+      "action": "cf_embeddia_article_analyzer_keywords",
+      "wsdl": "",
+      "wsdl_method": "",
+      "description": "This is a wrapper for the article analyzer service from the EU Embeddia project.",
+      "category": "d7fab604-318a-4c74-a0ac-f0f9d5263dd4",
+      "visualization_view": "",
+      "streaming_visualization_view": "",
+      "interactive": false,
+      "interaction_view": "",
+      "post_interact_action": "",
+      "image": "",
+      "treeview_image": "",
+      "static_image": "",
+      "has_progress_bar": false,
+      "is_streaming": false,
+      "order": 1,
+      "uid": "eccaae83-dc57-4dd7-9fc8-930ace1af0ca",
+      "package": "cf_embeddia",
+      "always_save_results": false,
+      "windows_queue": false
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Analyzer",
+      "short_name": "alg",
+      "description": "Analysis method to be applied on text",
+      "variable": "algorithm",
+      "widget": "eccaae83-dc57-4dd7-9fc8-930ace1af0ca",
+      "required": true,
+      "parameter": true,
+      "multi": false,
+      "default": "Keyword Extractor - RaKUn (Multilingual)",
+      "parameter_type": "select",
+      "order": 1,
+      "uid": "00068fc3-ffd5-44f0-a8bf-3cae1f272f96"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Text",
+      "short_name": "txt",
+      "description": "Input text",
+      "variable": "text",
+      "widget": "eccaae83-dc57-4dd7-9fc8-930ace1af0ca",
+      "required": true,
+      "parameter": false,
+      "multi": false,
+      "default": "",
+      "parameter_type": null,
+      "order": 1,
+      "uid": "08f44a14-c639-4526-acde-f85255f14627"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Service URL",
+      "short_name": "url",
+      "description": "Article analyzer service URL",
+      "variable": "url",
+      "widget": "eccaae83-dc57-4dd7-9fc8-930ace1af0ca",
+      "required": true,
+      "parameter": true,
+      "multi": false,
+      "default": "https://embeddia-demo.texta.ee/api/v1/article_analyzer/",
+      "parameter_type": "text",
+      "order": 1,
+      "uid": "fd307e46-2233-429e-8a8b-93e4643f0f18"
+    }
+  },
+  {
+    "model": "workflows.abstractoutput",
+    "fields": {
+      "name": "Keywords",
+      "short_name": "kwd",
+      "description": "List of extracted keywords",
+      "variable": "keywords",
+      "widget": "eccaae83-dc57-4dd7-9fc8-930ace1af0ca",
+      "order": 1,
+      "uid": "15f1af20-4e90-4472-b47e-f6cc63fbfbf5"
+    }
+  },
+  {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "abstract_input": "00068fc3-ffd5-44f0-a8bf-3cae1f272f96",
+      "name": "Keyword Extractor - TNT-KID (Estonian)",
+      "value": "Keyword Extractor - TNT-KID (Estonian)",
+      "uid": "087c622a-fea1-48bb-b1b0-0919cd09b8a6"
+    }
+  },
+  {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "abstract_input": "00068fc3-ffd5-44f0-a8bf-3cae1f272f96",
+      "name": "Keyword Extractor - RaKUn (Multilingual)",
+      "value": "Keyword Extractor - RaKUn (Multilingual)",
+      "uid": "48dc72bb-e820-47df-b89c-6172e88696f8"
+    }
+  },
+  {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "abstract_input": "00068fc3-ffd5-44f0-a8bf-3cae1f272f96",
+      "name": "Keyword Extractor - TNT-KID (Latvian)",
+      "value": "Keyword Extractor - TNT-KID (Latvian)",
+      "uid": "9ac5a229-6463-475c-9ca8-1da12400f4f5"
+    }
+  },
+  {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "abstract_input": "00068fc3-ffd5-44f0-a8bf-3cae1f272f96",
+      "name": "Keyword Extractor - TNT-KID (Croatian)",
+      "value": "Keyword Extractor - TNT-KID (Croatian)",
+      "uid": "f0ce6898-6b11-45d2-85ad-1a45b40e8887"
+    }
+  }
+]

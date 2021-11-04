@@ -16,6 +16,32 @@ def cf_embeddia_article_analyzer(input_dict):
     return {'keywords': tags, 'entities': entities}
 
 
+def cf_embeddia_article_analyzer_keywords(input_dict):
+    text = input_dict['text']
+    analyzer = input_dict['algorithm']
+    url = input_dict['url']
+
+    jsondata = {'text': text, 'analyzers': [analyzer]}
+    response = requests.post(url, json=jsondata)
+    result = response.json()
+
+    tags = [x['tag'] for x in result.get('tags', [])]
+    return {'keywords': tags}
+
+
+def cf_embeddia_article_analyzer_NER(input_dict):
+    text = input_dict['text']
+    analyzer = input_dict['algorithm']
+    url = input_dict['url']
+
+    jsondata = {'text': text, 'analyzers': [analyzer]}
+    response = requests.post(url, json=jsondata)
+    result = response.json()
+
+    entities = [(x['entity'], x['type']) for x in result.get('entities', [])]
+    return {'entities': entities}
+
+
 def cf_embeddia_comment_moderator(input_dict):
     corpus = input_dict['corpus']
     analyzer = input_dict['analyzer']
