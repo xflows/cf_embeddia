@@ -2,7 +2,7 @@
   {
     "model": "workflows.abstractwidget",
     "fields": {
-      "name": "Article analyzer (keywords)",
+      "name": "Keyword Detection",
       "action": "cf_embeddia_article_analyzer_keywords",
       "wsdl": "",
       "wsdl_method": "",

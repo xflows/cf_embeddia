@@ -2,7 +2,7 @@
   {
     "model": "workflows.abstractwidget",
     "fields": {
-      "name": "Article analyzer (NER)",
+      "name": "Named Entity Recognition",
       "action": "cf_embeddia_article_analyzer_NER",
       "wsdl": "",
       "wsdl_method": "",
