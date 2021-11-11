@@ -119,6 +119,15 @@
     "model": "workflows.abstractoption",
     "fields": {
       "abstract_input": "00068fc3-ffd5-44f0-a8bf-3cae1f272f96",
+      "name": "Keyword Extractor - TNT-KID (English)",
+      "value": "Keyword Extractor - TNT-KID (English)",
+      "uid": "be53553d-f8a6-47dc-826c-4250a18f9a2a"
+    }
+  },
+  {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "abstract_input": "00068fc3-ffd5-44f0-a8bf-3cae1f272f96",
       "name": "Keyword Extractor - TNT-KID (Croatian)",
       "value": "Keyword Extractor - TNT-KID (Croatian)",
       "uid": "f0ce6898-6b11-45d2-85ad-1a45b40e8887"
