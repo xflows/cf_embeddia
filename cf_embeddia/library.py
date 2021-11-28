@@ -8,6 +8,8 @@ def cf_embeddia_article_analyzer(input_dict):
 
     jsondata = {'text': text, 'analyzers': [analyzer]}
     response = requests.post(url, json=jsondata)
+    if response.status_code // 100 != 2:
+        raise Exception('Web service error, code {}'.format(response.status_code))
     result = response.json()
 
     tags = [x['tag'] for x in result.get('tags', [])]
@@ -23,6 +25,8 @@ def cf_embeddia_article_analyzer_keywords(input_dict):
 
     jsondata = {'text': text, 'analyzers': [analyzer]}
     response = requests.post(url, json=jsondata)
+    if response.status_code // 100 != 2:
+        raise Exception('Web service error, code {}'.format(response.status_code))
     result = response.json()
 
     tags = [x['tag'] for x in result.get('tags', [])]
@@ -36,6 +40,8 @@ def cf_embeddia_article_analyzer_NER(input_dict):
 
     jsondata = {'text': text, 'analyzers': [analyzer]}
     response = requests.post(url, json=jsondata)
+    if response.status_code // 100 != 2:
+        raise Exception('Web service error, code {}'.format(response.status_code))
     result = response.json()
 
     entities = [(x['entity'], x['type']) for x in result.get('entities', [])]
@@ -55,6 +61,8 @@ def cf_embeddia_comment_moderator(input_dict):
     for doc in corpus:
         jsondata = {'text': doc, 'analyzers': [analyzer]}
         response = requests.post(url, json=jsondata)
+        if response.status_code // 100 != 2:
+            raise Exception('Web service error, code {}'.format(response.status_code))
         result = response.json()
         if result.get('tags'):
             first = result['tags'][0]
