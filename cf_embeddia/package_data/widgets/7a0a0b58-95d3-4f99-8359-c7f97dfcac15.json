@@ -1,0 +1,74 @@
+[
+  {
+    "model": "workflows.abstractwidget",
+    "fields": {
+      "name": "Author profiling",
+      "action": "cf_embeddia_author_profiling",
+      "wsdl": "",
+      "wsdl_method": "",
+      "description": "A service for English and Spanish author profiling that can determine whether a tweet or comment\r\nwas written by a bot, male or female.",
+      "category": "d7fab604-318a-4c74-a0ac-f0f9d5263dd4",
+      "visualization_view": "",
+      "streaming_visualization_view": "",
+      "interactive": false,
+      "interaction_view": "",
+      "post_interact_action": "",
+      "image": "",
+      "treeview_image": "",
+      "static_image": "",
+      "has_progress_bar": false,
+      "is_streaming": false,
+      "order": 1,
+      "uid": "7a0a0b58-95d3-4f99-8359-c7f97dfcac15",
+      "package": "cf_embeddia",
+      "always_save_results": false,
+      "windows_queue": false
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Service URL",
+      "short_name": "url",
+      "description": "URL of the service",
+      "variable": "url",
+      "widget": "7a0a0b58-95d3-4f99-8359-c7f97dfcac15",
+      "required": true,
+      "parameter": true,
+      "multi": false,
+      "default": "http://kt-docker-host.ijs.si:8100/rest_api/author_profiling/",
+      "parameter_type": "text",
+      "order": 1,
+      "uid": "5e4a1e70-0d91-47ab-ac98-e4961620ca7b"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "name": "Corpus",
+      "short_name": "txt",
+      "description": "Corpus (a list of strings)",
+      "variable": "corpus",
+      "widget": "7a0a0b58-95d3-4f99-8359-c7f97dfcac15",
+      "required": true,
+      "parameter": false,
+      "multi": false,
+      "default": "",
+      "parameter_type": null,
+      "order": 1,
+      "uid": "7d4f60a7-b422-49b6-9962-5e2a5428bd18"
+    }
+  },
+  {
+    "model": "workflows.abstractoutput",
+    "fields": {
+      "name": "Author profiles",
+      "short_name": "cls",
+      "description": "A list of tags (bot, male, or female)",
+      "variable": "profiles",
+      "widget": "7a0a0b58-95d3-4f99-8359-c7f97dfcac15",
+      "order": 1,
+      "uid": "e5eba8f6-e4c9-4807-9e3a-efefe0afca47"
+    }
+  }
+]
