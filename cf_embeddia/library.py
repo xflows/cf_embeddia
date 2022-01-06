@@ -48,26 +48,29 @@ def cf_embeddia_article_analyzer_NER(input_dict):
     return {'entities': entities}
 
 
-def cf_embeddia_comment_moderator(input_dict):
+def cf_embeddia_comment_analyzer(input_dict):
     corpus = input_dict['corpus']
-    analyzer = input_dict['analyzer']
-    threshold = float(input_dict['threshold'])
     url = input_dict['url']
 
-    if len(corpus) > 100:
-        raise ValueError('Too many input documents for this service.')
+    jsondata = {'texts': corpus}
+    response = requests.post(url, json=jsondata)
+    if response.status_code // 100 != 2:
+        raise Exception('Web service error, code {}'.format(response.status_code))
+    result = response.json()
+    labels = result.get('labels')
+    print(labels)
+    labels = ['offensive' if x == 'Blocked' else x for x in labels]
+    labels = ['ok' if x == 'Non-Blocked' else x for x in labels]
+    return {'labels': labels, 'confidences': result.get('confidences')}
 
-    filtered_corpus = []
-    for doc in corpus:
-        jsondata = {'text': doc, 'analyzers': [analyzer]}
-        response = requests.post(url, json=jsondata)
-        if response.status_code // 100 != 2:
-            raise Exception('Web service error, code {}'.format(response.status_code))
-        result = response.json()
-        if result.get('tags'):
-            first = result['tags'][0]
-            if first['tag'] == 'OFFENSIVE' and first['probability'] > threshold:
-                continue
-            else:
-                filtered_corpus.append(doc)
-    return {'filtered_corpus': filtered_corpus}
+
+def cf_embeddia_author_profiling(input_dict):
+    corpus = input_dict['corpus']
+    url = input_dict['url']
+
+    jsondata = {'texts': corpus}
+    response = requests.post(url, json=jsondata)
+    if response.status_code // 100 != 2:
+        raise Exception('Web service error, code {}'.format(response.status_code))
+    result = response.json()
+    return {'profiles': result.get('decisions')}
