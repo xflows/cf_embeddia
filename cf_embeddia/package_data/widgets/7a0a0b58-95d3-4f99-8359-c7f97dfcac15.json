@@ -36,7 +36,7 @@
       "required": true,
       "parameter": true,
       "multi": false,
-      "default": "http://kt-docker-host.ijs.si:8100/rest_api/author_profiling/",
+      "default": "http://95.87.154.28:8100/rest_api/author_profiling/",
       "parameter_type": "text",
       "order": 1,
       "uid": "5e4a1e70-0d91-47ab-ac98-e4961620ca7b"

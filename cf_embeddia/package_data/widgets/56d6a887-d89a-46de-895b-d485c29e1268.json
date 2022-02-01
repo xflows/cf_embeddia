@@ -92,15 +92,6 @@
     "model": "workflows.abstractoption",
     "fields": {
       "abstract_input": "5ceca1e4-c378-4ca7-8974-c0f7c744d34e",
-      "name": "Named Entity Extractor - BiLSTM (Croatian)",
-      "value": "Named Entity Extractor - BiLSTM (Croatian)",
-      "uid": "1c594090-1a24-4561-97df-0fb3d33d43df"
-    }
-  },
-  {
-    "model": "workflows.abstractoption",
-    "fields": {
-      "abstract_input": "5ceca1e4-c378-4ca7-8974-c0f7c744d34e",
       "name": "Named Entity Extractor - TEXTA MLP (Multilingual)",
       "value": "Named Entity Extractor - TEXTA MLP (Multilingual)",
       "uid": "50a7b3c3-8a8e-4e34-a998-4f9bd7fedb61"

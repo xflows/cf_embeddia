@@ -53,7 +53,7 @@
       "required": true,
       "parameter": true,
       "multi": false,
-      "default": "http://kt-docker-host.ijs.si:8101/comments_api/hate_speech_list/",
+      "default": "http://95.87.154.28:8101/comments_api/hate_speech_list/",
       "parameter_type": "text",
       "order": 1,
       "uid": "9bf62285-33d0-4345-9bdc-2ce7ea1958a8"
